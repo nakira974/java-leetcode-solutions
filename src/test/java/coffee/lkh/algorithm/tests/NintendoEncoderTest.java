@@ -13,15 +13,15 @@ public class NintendoEncoderTest {
 
     @Test
     public void testNintendoEncoderAlgorithm() {
-        EventBus eventBus = new EventBus();
-        DetailedAlgorithm nintendoEncoderAlgorithm = new NintendoEncoder();
-        DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(eventBus, nintendoEncoderAlgorithm);
+        final EventBus eventBus = new EventBus();
+        final DetailedAlgorithm nintendoEncoderAlgorithm = new NintendoEncoder();
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(eventBus, nintendoEncoderAlgorithm);
 
         int size = 5;  // Initialize as per your requirements
         int[] arrayA = new int[]{1,2,3,4,5};  // Initialize as per your requirements
         int[] arrayB = new int[]{6,7,8,9,10};  // Initialize as per your requirements
 
-        Map<String, Object> parameters = new HashMap<>();
+        final Map<String, Object> parameters = new HashMap<>();
         parameters.put("size", size);
         parameters.put("arrayA", arrayA);
         parameters.put("arrayB", arrayB);
