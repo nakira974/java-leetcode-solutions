@@ -1,0 +1,90 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'signing'
+}
+group 'coffee.lkh'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
+
+ext {
+    junitVersion = '5.10.0'
+}
+
+sourceCompatibility = '21'
+targetCompatibility = '21'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    implementation("org.greenrobot:eventbus:3.2.0")
+}
+
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'coffee.lkh'
+            artifactId = 'algo-commons'
+            version = '1.0'
+            from components.java
+
+            pom {
+                name = 'Reno-System Models'
+                description = 'A simple Java library for Reno-System class and entity common models'
+                properties = [
+                        editor              : "lkhsoft",
+                        "fr.lkhsoft.project": "algo-commons"
+                ]
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'nakira974'
+                        name = 'Maxime Loukhal'
+                        email = 'mxlkh@duck.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/nakira974/reno-system-models.git'
+                    developerConnection = 'scm:git:ssh://github.com/nakira974/eno-system-models.git'
+                    url = 'https://github.com/nakira974/logging-util'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = "reno-system"
+            url = "https://maven.pkg.github.com/nakira974/algo-commons"
+            credentials {
+                username = System.getenv("ACTOR")
+                password = System.getenv("TOKEN")
+            }
+        }
+    }
+}
+
+javadoc {
+    if (JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
+}
