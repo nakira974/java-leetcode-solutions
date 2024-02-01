@@ -20,21 +20,21 @@ public class AlgoFactoryRepositoryTest {
 
     @BeforeEach
     void setUp() {
-        EventBus eventBus = new EventBus();
+        final EventBus eventBus = new EventBus();
         factory = new DetailedAlgorithmFactoryImpl(eventBus); // assume we have a factory implementation
         repository = new DetailedAlgorithmRepositoryImpl();  // assume we have a repository implementation
 
         // Instantiate a DetailedAlgorithmDelegate for each algorithm here:
-        String criteria = "NintendoEncoderAlgorithm";  // replace according to actual factory design
-        DetailedAlgorithm algorithm = factory.createAlgorithm(criteria);
+        final String criteria = "NintendoEncoderAlgorithm";  // replace according to actual factory design
+        final DetailedAlgorithm algorithm = factory.createAlgorithm(criteria);
         delegate = new DetailedAlgorithmDelegate(eventBus, algorithm);
     }
 
     @Test
     public void testFactory() {
-        String criteria = "NintendoEncoderAlgorithm";  // replace according to actual factory design
+        final String criteria = "NintendoEncoderAlgorithm";  // replace according to actual factory design
 
-        DetailedAlgorithm algorithmFromFactory = factory.createAlgorithm(criteria);
+        final DetailedAlgorithm algorithmFromFactory = factory.createAlgorithm(criteria);
         
         assertNotNull(algorithmFromFactory, "The algorithm should not be null");
         assertTrue(algorithmFromFactory instanceof DetailedAlgorithm,
@@ -43,12 +43,12 @@ public class AlgoFactoryRepositoryTest {
 
     @Test
     public void testRepository() {
-        String id = "NintendoEncoderAlgorithm";  // replace according to actual repository design
+        final String id = "NintendoEncoderAlgorithm";  // replace according to actual repository design
 
-        DetailedAlgorithm algorithmToSaveInRepo = factory.createAlgorithm(id);
+        final DetailedAlgorithm algorithmToSaveInRepo = factory.createAlgorithm(id);
         repository.addAlgorithm(algorithmToSaveInRepo);
 
-        DetailedAlgorithm algorithmFromRepo = repository.getAlgorithm(id);
+        final DetailedAlgorithm algorithmFromRepo = repository.getAlgorithm(id);
 
         assertSame(algorithmToSaveInRepo, algorithmFromRepo, 
                 "The algorithm returned from the repository should be the same as the one saved");

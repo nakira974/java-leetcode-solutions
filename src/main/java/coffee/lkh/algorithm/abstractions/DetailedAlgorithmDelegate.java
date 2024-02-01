@@ -1,6 +1,5 @@
 package coffee.lkh.algorithm.abstractions;
 
-import coffee.lkh.algorithm.abstractions.DetailedAlgorithm;
 import coffee.lkh.algorithm.events.AlgorithmProcessCompletedEvent;
 import coffee.lkh.algorithm.events.AlgorithmProcessInitiatedEvent;
 import org.greenrobot.eventbus.EventBus;
@@ -17,9 +16,10 @@ public class DetailedAlgorithmDelegate implements DetailedAlgorithm {
     }
 
     @Override
-    public void process(Map<String, Object> params) {
+    public Map<String, Object> process(Map<String, Object> params) {
         this.eventBus.post(new AlgorithmProcessInitiatedEvent(this.detailedAlgorithm));
-        this.detailedAlgorithm.process(params);
+        final Map<String, Object> result = this.detailedAlgorithm.process(params);
         this.eventBus.post(new AlgorithmProcessCompletedEvent(this.detailedAlgorithm));
+        return result;
     }
 }
