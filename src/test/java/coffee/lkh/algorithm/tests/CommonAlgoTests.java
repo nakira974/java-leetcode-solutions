@@ -2,6 +2,7 @@ package coffee.lkh.algorithm.tests;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
 import coffee.lkh.algorithm.impl.CombinaisonGenerator;
+import coffee.lkh.algorithm.impl.MergeArraySorted;
 import org.greenrobot.eventbus.EventBus;
 import org.junit.jupiter.api.Test;
 

@@ -2,10 +2,10 @@ package coffee.lkh.algorithm.impl;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmBase;
 
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicIntegerArray;
+import java.util.stream.IntStream;
 
 public class MergeArraySorted extends DetailedAlgorithmBase {
     private static final String NUMS1 = "nums1";
@@ -47,7 +47,6 @@ public class MergeArraySorted extends DetailedAlgorithmBase {
             }
         }
         filter(result);
-        int[] ints = {0, 0};
         System.arraycopy(result,0,nums1, 0, result.length);
     }
 
