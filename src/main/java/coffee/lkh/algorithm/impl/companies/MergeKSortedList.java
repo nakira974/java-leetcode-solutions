@@ -25,13 +25,20 @@ public class MergeKSortedList extends DetailedAlgorithmBase {
     public static class ListNode {
         int val;
         ListNode next;
+        public int getVal() {
+            return val;
+        }
+
+        public ListNode getNext() {
+            return next;
+        }
         public ListNode() {}
         public ListNode(int val) { this.val = val; } // ListNode constructor
         public ListNode(int val, ListNode next) { this.val = val; this.next = next; } // ListNode constructor with next node
     }
 
     public ListNode mergeKLists(ListNode[] lists) {
-        ListNode head = new ListNode(0); // Initialize a placeholder ListNode to serve as the start of the returned list
+        final ListNode head = new ListNode(0); // Initialize a placeholder ListNode to serve as the start of the returned list
         ListNode current = head; // Initialize current to point to head
 
         boolean isAllNull;

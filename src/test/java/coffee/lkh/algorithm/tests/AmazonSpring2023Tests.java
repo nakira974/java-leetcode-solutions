@@ -10,6 +10,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicIntegerArray;
@@ -75,8 +76,12 @@ public class AmazonSpring2023Tests {
         final EventBus bus = new EventBus();
         final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new MergeKSortedList());
         delegate.process(parameters);
-        int result = (Integer) parameters.get("result");
-
-        System.out.printf("The result of candy is %d%n", result);
+        ListNode result = (ListNode) parameters.get("result");
+        System.out.print("{");
+        while (result != null) {
+            System.out.printf(" %d ", result.getVal());
+            result = result.getNext();
+        }
+        System.out.printf("}%n");
     }
 }
