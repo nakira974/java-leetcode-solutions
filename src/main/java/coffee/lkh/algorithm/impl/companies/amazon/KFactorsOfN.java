@@ -9,34 +9,22 @@ public class KFactorsOfN extends DetailedAlgorithmBase {
     private static final String K = "k";
     private static final String N = "n";
 
-    public int[] getFactors(int number){
-        final List<Integer> result = new ArrayList<>();
-        helper(number,1,result);
-        return result.stream().mapToInt(x->x).toArray();
-    }
-
-    private void helper(int number, int current, List<Integer> factors){
-        if( current > (int)Math.sqrt(number)){
-            return;
-        }
-
-        if(number % current == 0){
-            factors.add(current);
-            int switchValue = number / current;
-            if(current != switchValue){
-                factors.add(switchValue);
+        public int kthFactor(int n, int k) {
+            int sum =0;
+            for(int i=1;i<=n;i++)
+            {
+                if(n%i==0)
+                {
+                    sum++;
+                }
+                if(sum==k)
+                {
+                    return i;
+                }
             }
+            return -1;
+
         }
-        helper(number, current+1,factors);
-    }
-    public int kthFactor(int n, int k) {
-        int[] factors = getFactors(n);
-        Arrays.sort(factors);
-        if(k<=factors.length){
-            return factors[k-1];
-        }
-        return -1;
-    }
 
     @Override
     public Map<String, Object> process(Map<String, Object> params) {

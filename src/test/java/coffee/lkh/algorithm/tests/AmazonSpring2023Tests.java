@@ -1,6 +1,7 @@
 package coffee.lkh.algorithm.tests;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
+import coffee.lkh.algorithm.impl.companies.Candy;
 import coffee.lkh.algorithm.impl.companies.CombinaisonGenerator;
 import coffee.lkh.algorithm.impl.companies.amazon.KFactorsOfN;
 import coffee.lkh.algorithm.impl.companies.amazon.OptimalPartitionString;
@@ -10,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicIntegerArray;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class AmazonSpring2023Tests {
@@ -30,7 +32,7 @@ public class AmazonSpring2023Tests {
     @Test
     public void testPartitionString(){
         final Map<String, Object> parameters = new HashMap<>();
-        final AtomicReference<String> s = new AtomicReference<>("abacaba");
+        final AtomicReference<String> s = new AtomicReference<>("gizfdfri");
 
         parameters.put("s",s);
 
@@ -40,5 +42,19 @@ public class AmazonSpring2023Tests {
         int result = (Integer) parameters.get("result");
 
         System.out.printf("The result of partition string is %d%n", result);
+    }
+
+    @Test
+    public void testCandy(){
+        final Map<String, Object> parameters = new HashMap<>();
+
+        parameters.put("ratings",new int[]{1,3,2,2,1});
+
+        final EventBus bus = new EventBus();
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new Candy());
+        delegate.process(parameters);
+        int result = (Integer) parameters.get("result");
+
+        System.out.printf("The result of candy is %d%n", result);
     }
 }

@@ -2,6 +2,7 @@ package coffee.lkh.algorithm.impl.companies.amazon;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmBase;
 
+import java.util.HashSet;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
@@ -31,28 +32,25 @@ public class OptimalPartitionString extends DetailedAlgorithmBase {
      @return the minimum number of substrings in such a partition.
 
      @apiNote  each character should belong to exactly one substring in a partition.*/
+
     public int partitionString(String s) {
-        int counter = 0;
-        int lastStartIndex =0 ;
-        StringBuffer temp = new StringBuffer();
-        temp.append("");
-        for(int i=0;i<s.length();i++){
-            temp.append(s.toCharArray()[i]);
-            while(lastStartIndex<s.length()){
-                boolean valid = true;
-                for(int j=0;j<temp.length();j++){
-                    if(temp.charAt(j) == s.toCharArray()[i] ){
-                        valid = false;
-                        break;
-                    }
-                }
-                lastStartIndex++;
-                if(valid) temp.append(s.toCharArray()[i++]);
-                else continue;
+        int stringLength = s.length();
+        int bitmask = 0;
+        int numParts = 1;
+        byte[] characters = new byte[stringLength];
+        s.getBytes(0, stringLength, characters, 0);
+
+        for (byte currentChar : characters) {
+            int charMask = 1 << currentChar;
+
+            if ((bitmask & charMask) != 0) {
+                ++numParts;
+                bitmask = charMask;
+            } else {
+                bitmask |= charMask;
             }
-            counter++;
-            temp.delete(0, temp.length());
         }
-        return counter;
+
+        return numParts;
     }
 }
