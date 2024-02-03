@@ -77,6 +77,7 @@ public class AmazonSpring2023Tests {
         final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new MergeKSortedList());
         delegate.process(parameters);
         ListNode result = (ListNode) parameters.get("result");
+        System.out.println("The result of k merged sorted list is :");
         System.out.print("{");
         while (result != null) {
             System.out.printf(" %d ", result.getVal());

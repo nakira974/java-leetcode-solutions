@@ -38,34 +38,33 @@ public class MergeKSortedList extends DetailedAlgorithmBase {
     }
 
     public ListNode mergeKLists(ListNode[] lists) {
-        final ListNode head = new ListNode(0); // Initialize a placeholder ListNode to serve as the start of the returned list
-        ListNode current = head; // Initialize current to point to head
+        // PriorityQueue is used as a min heap where the node with the smallest value is at the top
+        PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) -> a.val - b.val);
 
-        boolean isAllNull;
+        // Add head nodes of all non-empty lists into the PriorityQueue
+        for(ListNode node : lists) {
+            if(node != null)
+                queue.add(node);
+        }
 
-        do {
-            isAllNull = true;
+        // Dummy head node
+        ListNode head = new ListNode(0);
+        // Pointer to the current node
+        ListNode temp = head;
 
-            //Loop over all the lists
-            for(int i = 0; i<lists.length; i++ ) {
-                //If this list still has a node
-                if(lists[i]!=null) {
-                    // Link the current node to the node from list[i]
-                    current.next = lists[i];
+        // Continue till queue is empty
+        while (!queue.isEmpty()) {
+            // Get the node with smallest value
+            temp.next = queue.poll();
+            temp = temp.next;
 
-                    // Move current to its next node
-                    current = current.next;
+            // Add next node of the list from which a node has been processed
+            if(temp.next != null)
+                queue.add(temp.next);
+        }
 
-                    // Move to the next node in the current list
-                    lists[i] = lists[i].next;
-
-                    // At least one list still has a node
-                    isAllNull = false;
-                }
-            }
-
-        } while(!isAllNull);
-
-        return head.next; // The first node in the merged list
+        // Return the dummy head's next which is the start of the merged list
+        return head.next;
     }
 }
+
