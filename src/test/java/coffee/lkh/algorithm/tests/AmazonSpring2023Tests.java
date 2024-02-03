@@ -3,6 +3,7 @@ package coffee.lkh.algorithm.tests;
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
 import coffee.lkh.algorithm.impl.companies.Candy;
 import coffee.lkh.algorithm.impl.companies.CombinaisonGenerator;
+import coffee.lkh.algorithm.impl.companies.MergeKSortedList;
 import coffee.lkh.algorithm.impl.companies.amazon.KFactorsOfN;
 import coffee.lkh.algorithm.impl.companies.amazon.OptimalPartitionString;
 import org.greenrobot.eventbus.EventBus;
@@ -13,6 +14,8 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicIntegerArray;
 import java.util.concurrent.atomic.AtomicReference;
+
+import static coffee.lkh.algorithm.impl.companies.MergeKSortedList.*;
 
 public class AmazonSpring2023Tests {
     @Test
@@ -52,6 +55,25 @@ public class AmazonSpring2023Tests {
 
         final EventBus bus = new EventBus();
         final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new Candy());
+        delegate.process(parameters);
+        int result = (Integer) parameters.get("result");
+
+        System.out.printf("The result of candy is %d%n", result);
+    }
+
+    @Test
+    public void testMergeKSortedList(){
+        final Map<String, Object> parameters = new HashMap<>();
+
+        ListNode nodeA1 = new ListNode(1, new ListNode(4, new ListNode(5)));
+        ListNode nodeB1 = new ListNode(1, new ListNode(3, new ListNode(4)));
+        ListNode nodeC1 = new ListNode(2, new ListNode(6));
+
+        ListNode[] nodes = {nodeA1, nodeB1, nodeC1};
+        parameters.put("lists",nodes);
+
+        final EventBus bus = new EventBus();
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new MergeKSortedList());
         delegate.process(parameters);
         int result = (Integer) parameters.get("result");
 
