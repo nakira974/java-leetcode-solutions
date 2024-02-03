@@ -2,7 +2,7 @@ package coffee.lkh.algorithm.tests;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithm;
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
-import coffee.lkh.algorithm.impl.NintendoEncoder;
+import coffee.lkh.algorithm.impl.companies.nintendo.NintendoEncoder;
 import org.greenrobot.eventbus.EventBus;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +10,6 @@ import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicIntegerArray;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class NintendoEncoderTest {

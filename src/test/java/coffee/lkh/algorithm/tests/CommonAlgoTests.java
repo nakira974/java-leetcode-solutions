@@ -1,12 +1,10 @@
 package coffee.lkh.algorithm.tests;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
-import coffee.lkh.algorithm.impl.CombinaisonGenerator;
-import coffee.lkh.algorithm.impl.MergeArraySorted;
+import coffee.lkh.algorithm.impl.companies.CombinaisonGenerator;
 import org.greenrobot.eventbus.EventBus;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

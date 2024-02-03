@@ -1,15 +1,12 @@
-package coffee.lkh.algorithm.impl;
+package coffee.lkh.algorithm.impl.companies.nintendo;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmBase;
 
 import java.math.BigInteger;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class NintendoEncoder extends DetailedAlgorithmBase {
     private static final String SIZE = "size";

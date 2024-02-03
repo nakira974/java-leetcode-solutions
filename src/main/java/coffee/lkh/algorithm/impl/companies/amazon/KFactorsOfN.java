@@ -1,12 +1,9 @@
-package coffee.lkh.algorithm.impl;
+package coffee.lkh.algorithm.impl.companies.amazon;
 
-import coffee.lkh.algorithm.abstractions.DetailedAlgorithm;
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmBase;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicIntegerArray;
-import java.util.stream.IntStream;
 
 public class KFactorsOfN extends DetailedAlgorithmBase {
     private static final String K = "k";

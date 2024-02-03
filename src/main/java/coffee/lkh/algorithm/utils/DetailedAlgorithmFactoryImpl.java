@@ -3,7 +3,7 @@ package coffee.lkh.algorithm.utils;
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithm;
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmFactory;
-import coffee.lkh.algorithm.impl.NintendoEncoder;
+import coffee.lkh.algorithm.impl.companies.nintendo.NintendoEncoder;
 import org.greenrobot.eventbus.EventBus;
 
 public class DetailedAlgorithmFactoryImpl implements DetailedAlgorithmFactory {

@@ -1,11 +1,10 @@
-package coffee.lkh.algorithm.impl;
+package coffee.lkh.algorithm.impl.companies.nintendo;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmBase;
 
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicIntegerArray;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class NintendoDecoder extends DetailedAlgorithmBase {
     private static final String SIZE = "size";

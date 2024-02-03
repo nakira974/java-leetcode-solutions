@@ -1,4 +1,4 @@
-package coffee.lkh.algorithm.impl;
+package coffee.lkh.algorithm.impl.companies;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmBase;
 
