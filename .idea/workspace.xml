@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="Update algo tests add JumpGame2.java">
-      <change beforePath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/TopInterview150Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/TopInterview150Test.java" afterDir="false" />
+    <list default="true" id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="add workspace.xml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/events/AlgorithmProcessCompletedEventSubscriber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/events/AlgorithmProcessInitiatedEventSubscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/abstractions/DetailedAlgorithmDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/abstractions/DetailedAlgorithmDelegate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +53,7 @@
   "keyToString": {
     "Gradle.Build java-leetcode-training.executor": "Run",
     "JUnit.amazon-spring-2023.executor": "Run",
+    "JUnit.interview top 150 tests.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -114,7 +118,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706936445360</updated>
-      <workItem from="1706936446402" duration="25058000" />
+      <workItem from="1706936446402" duration="25981000" />
     </task>
     <task id="LOCAL-00001" summary="Add Candy">
       <option name="closed" value="true" />
@@ -156,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707128765886</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add workspace.xml">
+      <option name="closed" value="true" />
+      <created>1707129022870</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707129022870</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,18 +180,8 @@
     <MESSAGE value="add output for testMergeKSortedList" />
     <MESSAGE value="solution passed using PriorityQueue" />
     <MESSAGE value="Update algo tests add JumpGame2.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update algo tests add JumpGame2.java" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/JumpGame2.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="add workspace.xml" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
