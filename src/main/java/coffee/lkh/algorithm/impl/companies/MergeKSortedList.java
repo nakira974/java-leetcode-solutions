@@ -39,7 +39,7 @@ public class MergeKSortedList extends DetailedAlgorithmBase {
 
     public ListNode mergeKLists(ListNode[] lists) {
         // PriorityQueue is used as a min heap where the node with the smallest value is at the top
-        PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) -> a.val - b.val);
+        final PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) -> a.val - b.val);
 
         // Add head nodes of all non-empty lists into the PriorityQueue
         for(ListNode node : lists) {
@@ -48,7 +48,7 @@ public class MergeKSortedList extends DetailedAlgorithmBase {
         }
 
         // Dummy head node
-        ListNode head = new ListNode(0);
+        final ListNode head = new ListNode(0);
         // Pointer to the current node
         ListNode temp = head;
 
@@ -65,6 +65,38 @@ public class MergeKSortedList extends DetailedAlgorithmBase {
 
         // Return the dummy head's next which is the start of the merged list
         return head.next;
+    }
+
+    public ListNode mergeLists(ListNode[] lists) {
+        ListNode dummy = new ListNode(0); // Dummy head
+        ListNode tail = dummy; // Pointer to form the new list
+
+        while (true) {
+            int minNodeIndex = findMinNodeIndex(lists); // Find smallest node
+            if(minNodeIndex == -1) { break; } // No more nodes to process
+
+            // Add smallest node to new list and move its pointer forward
+            tail.next = lists[minNodeIndex];
+            tail = tail.next;
+            lists[minNodeIndex] = lists[minNodeIndex].next;
+        }
+
+        return dummy.next; // Exclude the dummy head
+    }
+
+    private int findMinNodeIndex(ListNode[] lists) {
+        int minIndex = -1;
+        int minValue = Integer.MAX_VALUE;
+
+        // Find index of list that has smallest node
+        for(int i = 0; i < lists.length; i++) {
+            if(lists[i] != null && lists[i].val < minValue) {
+                minIndex = i;
+                minValue = lists[i].val;
+            }
+        }
+
+        return minIndex;
     }
 }
 
