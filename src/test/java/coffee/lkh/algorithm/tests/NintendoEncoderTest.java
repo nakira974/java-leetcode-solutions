@@ -16,9 +16,8 @@ public class NintendoEncoderTest {
 
     @Test
     public void testNintendoEncoderAlgorithm() {
-        final EventBus eventBus = new EventBus();
         final DetailedAlgorithm nintendoEncoderAlgorithm = new NintendoEncoder();
-        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(eventBus, nintendoEncoderAlgorithm);
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(nintendoEncoderAlgorithm);
 
         AtomicInteger size = new AtomicInteger();  // Initialize as per your requirements
         final AtomicReference<BigInteger[]> arrayB = new AtomicReference<>();

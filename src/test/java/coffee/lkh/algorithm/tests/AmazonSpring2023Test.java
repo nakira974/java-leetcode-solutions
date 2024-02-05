@@ -21,8 +21,7 @@ public class AmazonSpring2023Test {
         parameters.put("k",k);
         parameters.put("n", n);
 
-        final EventBus bus = new EventBus();
-        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new CombinaisonGenerator());
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(new CombinaisonGenerator());
         delegate.process(parameters);
     }
 
@@ -33,8 +32,7 @@ public class AmazonSpring2023Test {
 
         parameters.put("s",s);
 
-        final EventBus bus = new EventBus();
-        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new OptimalPartitionString());
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(new OptimalPartitionString());
         delegate.process(parameters);
         int result = (Integer) parameters.get("result");
 

@@ -23,8 +23,7 @@ public class TopInterview150Test {
 
         parameters.put("ratings",new int[]{1,3,2,2,1});
 
-        final EventBus bus = new EventBus();
-        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new Candy());
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(new Candy());
         delegate.process(parameters);
         int result = (Integer) parameters.get("result");
 
@@ -37,8 +36,7 @@ public class TopInterview150Test {
 
         parameters.put("nums",new AtomicIntegerArray(new int[]{2,3,1,1,4}));
 
-        final EventBus bus = new EventBus();
-        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new JumpGame2());
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(new JumpGame2());
         delegate.process(parameters);
         int result = (Integer) parameters.get("result");
 
@@ -56,8 +54,7 @@ public class TopInterview150Test {
         ListNode[] nodes = {nodeA1, nodeB1, nodeC1};
         parameters.put("lists",nodes);
 
-        final EventBus bus = new EventBus();
-        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new MergeKSortedList());
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(new MergeKSortedList());
         delegate.process(parameters);
         ListNode result = (ListNode) parameters.get("result");
         System.out.println("The result of k merged sorted list is :");

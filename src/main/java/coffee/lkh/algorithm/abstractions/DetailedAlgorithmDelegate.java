@@ -22,6 +22,16 @@ public class DetailedAlgorithmDelegate implements DetailedAlgorithm {
         this.detailedAlgorithm = detailedAlgorithm;
     }
 
+    public DetailedAlgorithmDelegate(DetailedAlgorithm detailedAlgorithm) {
+        this.eventBus = new EventBus();
+        final AlgorithmProcessInitiatedEventSubscriber initiatedSubscriber = new AlgorithmProcessInitiatedEventSubscriber();
+        final AlgorithmProcessCompletedEventSubscriber completedSubscriber = new AlgorithmProcessCompletedEventSubscriber();
+        this.eventBus.register(initiatedSubscriber);
+        this.eventBus.register(completedSubscriber);
+
+        this.detailedAlgorithm = detailedAlgorithm;
+    }
+
     @Override
     public Map<String, Object> process(Map<String, Object> params) {
         this.eventBus.post(new AlgorithmProcessInitiatedEvent(this.detailedAlgorithm));

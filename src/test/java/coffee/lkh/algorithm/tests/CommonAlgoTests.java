@@ -29,8 +29,7 @@ public class CommonAlgoTests {
         parameters.put("index", index);
         parameters.put("start", start);
 
-        final EventBus bus = new EventBus();
-        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new CombinaisonGenerator());
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(new CombinaisonGenerator());
         delegate.process(parameters);
     }
 
