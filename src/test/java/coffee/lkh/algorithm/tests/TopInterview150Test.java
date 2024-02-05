@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicIntegerArray;
 
 import static coffee.lkh.algorithm.impl.companies.MergeKSortedList.*;
 
@@ -33,7 +35,7 @@ public class TopInterview150Test {
     public void testJumpGame2(){
         final Map<String, Object> parameters = new HashMap<>();
 
-        parameters.put("ratings",new int[]{2,3,1,1,4});
+        parameters.put("nums",new AtomicIntegerArray(new int[]{2,3,1,1,4}));
 
         final EventBus bus = new EventBus();
         final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new JumpGame2());
