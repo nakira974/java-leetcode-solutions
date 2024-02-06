@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="Add BFS LevelOrder.java">
-      <change afterPath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/BfsImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/bfs/LevelOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/bfs/LevelOrder.java" afterDir="false" />
+    <list default="true" id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="add BfsImplTest.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="JUnit.interview top 150 tests">
+  <component name="RunManager" selected="JUnit.top interview 150 tests">
     <configuration name="Aamazon Spring 2023 tests" type="JUnit" factoryName="JUnit">
       <module name="algo-commons.test" />
       <option name="PACKAGE_NAME" value="coffee.lkh.algorithm.tests" />
@@ -84,10 +83,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="interview top 150 tests" type="JUnit" factoryName="JUnit">
+    <configuration name="bfs tests" type="JUnit" factoryName="JUnit">
       <module name="algo-commons.test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="PACKAGE_NAME" value="coffee.lkh.algorithm.tests" />
+      <option name="MAIN_CLASS_NAME" value="coffee.lkh.algorithm.tests.BfsImplTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="top interview 150 tests" type="JUnit" factoryName="JUnit">
+      <module name="algo-commons.test" />
       <option name="PACKAGE_NAME" value="coffee.lkh.algorithm.tests" />
       <option name="MAIN_CLASS_NAME" value="coffee.lkh.algorithm.tests.TopInterview150Test" />
       <option name="METHOD_NAME" value="" />
@@ -97,7 +106,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.interview top 150 tests" />
+      <item itemvalue="JUnit.bfs tests" />
+      <item itemvalue="JUnit.top interview 150 tests" />
       <item itemvalue="JUnit.Aamazon Spring 2023 tests" />
     </list>
   </component>
@@ -166,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707129022870</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add BfsImplTest.java">
+      <option name="closed" value="true" />
+      <created>1707251246435</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707251246435</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +198,8 @@
     <MESSAGE value="Update algo tests add JumpGame2.java" />
     <MESSAGE value="add workspace.xml" />
     <MESSAGE value="Add BFS LevelOrder.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add BFS LevelOrder.java" />
+    <MESSAGE value="add BfsImplTest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="add BfsImplTest.java" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
