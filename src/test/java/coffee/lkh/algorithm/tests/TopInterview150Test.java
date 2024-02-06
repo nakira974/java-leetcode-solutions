@@ -1,16 +1,16 @@
 package coffee.lkh.algorithm.tests;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
-import coffee.lkh.algorithm.impl.companies.Candy;
-import coffee.lkh.algorithm.impl.companies.JumpGame2;
-import coffee.lkh.algorithm.impl.companies.MergeKSortedList;
+import coffee.lkh.algorithm.impl.companies.arrays.Candy;
+import coffee.lkh.algorithm.impl.companies.arrays.JumpGame2;
+import coffee.lkh.algorithm.impl.companies.arrays.MergeKSortedList;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicIntegerArray;
 
-import static coffee.lkh.algorithm.impl.companies.MergeKSortedList.ListNode;
+import static coffee.lkh.algorithm.impl.companies.arrays.MergeKSortedList.ListNode;
 
 public class TopInterview150Test {
 

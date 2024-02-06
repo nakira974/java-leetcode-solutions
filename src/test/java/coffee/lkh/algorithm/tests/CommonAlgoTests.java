@@ -1,7 +1,7 @@
 package coffee.lkh.algorithm.tests;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
-import coffee.lkh.algorithm.impl.companies.CombinaisonGenerator;
+import coffee.lkh.algorithm.impl.companies.arrays.CombinaisonGenerator;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
