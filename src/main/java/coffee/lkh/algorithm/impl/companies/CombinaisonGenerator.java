@@ -12,16 +12,17 @@ public class CombinaisonGenerator extends DetailedAlgorithmBase {
     private static final String COMBINATION = "combination";
     private static final String INDEX = "index";
     private static final String START = "start";
+
     @Override
     public Map<String, Object> process(Map<String, Object> params) {
-        if(!isParametersValid(params)){
+        if (!isParametersValid(params)) {
             return null;
         }
-        final List<Integer> list =  (List<Integer>) params.get(LIST);
+        final List<Integer> list = (List<Integer>) params.get(LIST);
         final AtomicIntegerArray combination = (AtomicIntegerArray) params.get(COMBINATION);
         final AtomicInteger index = (AtomicInteger) params.get(INDEX);
         final AtomicInteger start = (AtomicInteger) params.get(START);
-        generateCombination(list, combination, index,start);
+        generateCombination(list, combination, index, start);
         return params;
     }
 
@@ -29,14 +30,14 @@ public class CombinaisonGenerator extends DetailedAlgorithmBase {
         if (index.get() == combination.length()) {
             System.out.print("{ ");
             for (int i = 0; i < combination.length(); i++) {
-                System.out.printf(" %d ",combination.get(i));
+                System.out.printf(" %d ", combination.get(i));
             }
             System.out.print(" }\n");
         }
 
         for (int i = start.get(); i < list.size(); i++) {
             combination.set(index.get(), list.get(i));
-            generateCombination(list, combination, new AtomicInteger(index.get()+1),new AtomicInteger(start.get()+1));
+            generateCombination(list, combination, new AtomicInteger(index.get() + 1), new AtomicInteger(start.get() + 1));
         }
 
     }
@@ -44,7 +45,7 @@ public class CombinaisonGenerator extends DetailedAlgorithmBase {
     @Override
     protected boolean isParametersValid(Map<String, Object> params) {
         return params.containsKey(LIST) &&
-                params.containsKey(COMBINATION)&&
+                params.containsKey(COMBINATION) &&
                 params.containsKey(INDEX) &&
                 params.containsKey(START) &&
                 params.get(LIST) instanceof List &&

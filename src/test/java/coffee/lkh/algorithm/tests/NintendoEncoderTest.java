@@ -3,7 +3,6 @@ package coffee.lkh.algorithm.tests;
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithm;
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
 import coffee.lkh.algorithm.impl.companies.nintendo.NintendoEncoder;
-import org.greenrobot.eventbus.EventBus;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigInteger;
@@ -27,22 +26,22 @@ public class NintendoEncoderTest {
         parameters.put("arrayA", "46508fb7 6677e201");
         parameters.put("arrayB", arrayB);
 
-        try{
+        try {
             delegate.process(parameters);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             System.err.println(ex.getMessage());
         }
 
         System.out.print("--- Original Sequence\n");
         System.out.print("{");
-        for (BigInteger encodedChar :(BigInteger[])parameters.get("hex_chars")){
+        for (BigInteger encodedChar : (BigInteger[]) parameters.get("hex_chars")) {
             System.out.printf(" %s ", encodedChar);
         }
         System.out.print("}\n");
         System.out.printf("--- Sequence length : %d%n", arrayB.get().length);
         System.out.print("--- Encrypted Sequence\n");
         System.out.print("{");
-        for (BigInteger encodedChar : arrayB.get()){
+        for (BigInteger encodedChar : arrayB.get()) {
             System.out.printf(" %s ", Integer.toHexString(encodedChar.intValue()));
         }
         System.out.print("}\n");

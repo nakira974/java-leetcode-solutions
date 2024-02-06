@@ -20,5 +20,5 @@ public class DetailedAlgorithmFactoryImpl implements DetailedAlgorithmFactory {
             return new DetailedAlgorithmDelegate(eventBus, new NintendoEncoder());
         }
         return null;
-    }    
+    }
 }

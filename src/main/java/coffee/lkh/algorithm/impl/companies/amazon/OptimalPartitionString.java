@@ -2,9 +2,7 @@ package coffee.lkh.algorithm.impl.companies.amazon;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmBase;
 
-import java.util.HashSet;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class OptimalPartitionString extends DetailedAlgorithmBase {
@@ -12,7 +10,7 @@ public class OptimalPartitionString extends DetailedAlgorithmBase {
 
     @Override
     public Map<String, Object> process(Map<String, Object> params) {
-        if(!isParametersValid(params)){
+        if (!isParametersValid(params)) {
             return null;
         }
         final AtomicReference<String> s = (AtomicReference<String>) params.get(S);
@@ -27,11 +25,12 @@ public class OptimalPartitionString extends DetailedAlgorithmBase {
                 params.get(S) instanceof AtomicReference<?>;
     }
 
-    /**Given a string s, partition the string into one or more substrings such that the characters in each substring are unique. That is, no letter appears in a single substring more than once.
-
-     @return the minimum number of substrings in such a partition.
-
-     @apiNote  each character should belong to exactly one substring in a partition.*/
+    /**
+     * Given a string s, partition the string into one or more substrings such that the characters in each substring are unique. That is, no letter appears in a single substring more than once.
+     *
+     * @return the minimum number of substrings in such a partition.
+     * @apiNote each character should belong to exactly one substring in a partition.
+     */
 
     public int partitionString(String s) {
         int stringLength = s.length();

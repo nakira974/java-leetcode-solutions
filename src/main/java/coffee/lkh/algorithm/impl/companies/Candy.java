@@ -3,17 +3,14 @@ package coffee.lkh.algorithm.impl.companies;
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmBase;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicIntegerArray;
 
 public class Candy extends DetailedAlgorithmBase {
     private static final String RATINGS = "ratings";
+
     @Override
     public Map<String, Object> process(Map<String, Object> params) {
-        if(!isParametersValid(params)){
+        if (!isParametersValid(params)) {
             throw new RuntimeException("Parameters are not valid!");
         }
         final int[] ratings = (int[]) params.get(RATINGS);
@@ -53,6 +50,6 @@ public class Candy extends DetailedAlgorithmBase {
 
     @Override
     protected boolean isParametersValid(Map<String, Object> params) {
-       return params.containsKey(RATINGS) && params.get(RATINGS) instanceof int[];
+        return params.containsKey(RATINGS) && params.get(RATINGS) instanceof int[];
     }
 }

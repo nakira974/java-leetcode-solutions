@@ -18,5 +18,5 @@ public class DetailedAlgorithmRepositoryImpl implements DetailedAlgorithmReposit
     @Override
     public DetailedAlgorithm getAlgorithm(String id) {
         return algorithmMap.get(id);
-    }    
+    }
 }

@@ -2,7 +2,6 @@ package coffee.lkh.algorithm.tests;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
 import coffee.lkh.algorithm.impl.companies.CombinaisonGenerator;
-import org.greenrobot.eventbus.EventBus;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -25,7 +24,7 @@ public class CommonAlgoTests {
         final AtomicInteger index = new AtomicInteger(0);
         final AtomicInteger start = new AtomicInteger(0);
         parameters.put("list", list);
-        parameters.put("combination",combination);
+        parameters.put("combination", combination);
         parameters.put("index", index);
         parameters.put("start", start);
 

@@ -22,7 +22,7 @@ public class NintendoEncoder extends DetailedAlgorithmBase {
         // Existing query creation logic
         final String[] query = createHexStringArray((String) params.get(ARRAY_A));
         final AtomicReference<BigInteger[]> resultArray = (AtomicReference<BigInteger[]>) params.get(ARRAY_B);
-        try{
+        try {
             // changed to BigInteger to handle larger unsigned long values
             final BigInteger[] a = Arrays.stream(query).map(x -> new BigInteger(x, 16)).toArray(BigInteger[]::new);
             final int size = a.length;
@@ -32,15 +32,15 @@ public class NintendoEncoder extends DetailedAlgorithmBase {
 
             for (int i = 0; i < size; i++) {
                 for (int j = 0; j < size; j++) {
-                    long temp = ((a[i / 32].longValue() >> (i%32)) & (a[j / 32 + size/32].longValue() >> (j%32)) & 1) << ((i+j)%32);
-                    b[(i+j)/32] = b[(i+j)/32].xor(BigInteger.valueOf(temp));
+                    long temp = ((a[i / 32].longValue() >> (i % 32)) & (a[j / 32 + size / 32].longValue() >> (j % 32)) & 1) << ((i + j) % 32);
+                    b[(i + j) / 32] = b[(i + j) / 32].xor(BigInteger.valueOf(temp));
                 }
             }
 
             // Putting 'b' now into params, assuming it holds the converted array
             ((AtomicReference<BigInteger[]>) params.get("arrayB")).set((b));
             params.put("hex_chars", a);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             throw new IllegalArgumentException("String length superior to 256!", ex);
         }
 

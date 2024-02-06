@@ -8,17 +8,17 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicIntegerArray;
 
-public class JumpGame2  extends DetailedAlgorithmBase {
+public class JumpGame2 extends DetailedAlgorithmBase {
     private static final String NUMS = "nums";
 
     @Override
     public Map<String, Object> process(Map<String, Object> params) {
-        if(!isParametersValid(params)){
+        if (!isParametersValid(params)) {
             throw new RuntimeException("Params of JumGame2 are incorrect!");
         }
         final AtomicIntegerArray numsParam = (AtomicIntegerArray) params.get(NUMS);
         int[] nums = new int[numsParam.length()];
-        for(int i=0;i< numsParam.length();i++){
+        for (int i = 0; i < numsParam.length(); i++) {
             nums[i] = numsParam.get(i);
         }
 

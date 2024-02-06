@@ -35,7 +35,7 @@ public class AlgoFactoryRepositoryTest {
         final String criteria = "NintendoEncoderAlgorithm";  // replace according to actual factory design
 
         final DetailedAlgorithm algorithmFromFactory = factory.createAlgorithm(criteria);
-        
+
         assertNotNull(algorithmFromFactory, "The algorithm should not be null");
         assertTrue(algorithmFromFactory instanceof DetailedAlgorithm,
                 "The created algorithm should be an instance of DetailedAlgorithm");
@@ -50,7 +50,7 @@ public class AlgoFactoryRepositoryTest {
 
         final DetailedAlgorithm algorithmFromRepo = repository.getAlgorithm(id);
 
-        assertSame(algorithmToSaveInRepo, algorithmFromRepo, 
+        assertSame(algorithmToSaveInRepo, algorithmFromRepo,
                 "The algorithm returned from the repository should be the same as the one saved");
     }
     // Add more tests for other functionalities as needed.

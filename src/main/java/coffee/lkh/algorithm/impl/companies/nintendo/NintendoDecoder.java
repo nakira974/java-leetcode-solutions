@@ -9,6 +9,7 @@ import java.util.concurrent.atomic.AtomicIntegerArray;
 public class NintendoDecoder extends DetailedAlgorithmBase {
     private static final String SIZE = "size";
     private static final String ARRAY_A = "arrayA";
+
     @Override
     public Map<String, Object> process(Map<String, Object> params) {
         if (!isParametersValid(params)) {

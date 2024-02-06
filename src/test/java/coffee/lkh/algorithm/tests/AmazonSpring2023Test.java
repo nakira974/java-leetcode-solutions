@@ -3,7 +3,6 @@ package coffee.lkh.algorithm.tests;
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
 import coffee.lkh.algorithm.impl.companies.CombinaisonGenerator;
 import coffee.lkh.algorithm.impl.companies.amazon.OptimalPartitionString;
-import org.greenrobot.eventbus.EventBus;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -18,7 +17,7 @@ public class AmazonSpring2023Test {
         final AtomicInteger k = new AtomicInteger(0);
         final AtomicInteger n = new AtomicInteger(0);
 
-        parameters.put("k",k);
+        parameters.put("k", k);
         parameters.put("n", n);
 
         final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(new CombinaisonGenerator());
@@ -26,11 +25,11 @@ public class AmazonSpring2023Test {
     }
 
     @Test
-    public void testPartitionString(){
+    public void testPartitionString() {
         final Map<String, Object> parameters = new HashMap<>();
         final AtomicReference<String> s = new AtomicReference<>("gizfdfri");
 
-        parameters.put("s",s);
+        parameters.put("s", s);
 
         final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(new OptimalPartitionString());
         delegate.process(parameters);

@@ -1,7 +1,6 @@
 package coffee.lkh.algorithm.tests;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
-import coffee.lkh.algorithm.impl.companies.Candy;
 import coffee.lkh.algorithm.impl.companies.bfs.LevelOrder;
 import org.junit.jupiter.api.Test;
 
@@ -12,10 +11,10 @@ import java.util.Map;
 public class BfsImplTest {
 
     @Test
-    public void levelOrderTest(){
+    public void levelOrderTest() {
         final Map<String, Object> parameters = new HashMap<>();
 
-        parameters.put("root",new LevelOrder.TreeNode(3, new LevelOrder.TreeNode(9), new LevelOrder.TreeNode(15, new LevelOrder.TreeNode(21), new LevelOrder.TreeNode(9))));
+        parameters.put("root", new LevelOrder.TreeNode(3, new LevelOrder.TreeNode(9), new LevelOrder.TreeNode(15, new LevelOrder.TreeNode(21), new LevelOrder.TreeNode(9))));
 
         final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(new LevelOrder());
         delegate.process(parameters);
