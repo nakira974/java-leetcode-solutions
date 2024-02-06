@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="add workspace.xml">
-      <change afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/events/AlgorithmProcessCompletedEventSubscriber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/events/AlgorithmProcessInitiatedEventSubscriber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/abstractions/DetailedAlgorithmDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/abstractions/DetailedAlgorithmDelegate.java" afterDir="false" />
+    <list default="true" id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="Add BFS LevelOrder.java">
+      <change afterPath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/BfsImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/bfs/LevelOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/bfs/LevelOrder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,41 +38,41 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2bqIzUYZ6cnsSklN0OfdgLrN2pt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build java-leetcode-training.executor": "Run",
-    "JUnit.amazon-spring-2023.executor": "Run",
-    "JUnit.interview top 150 tests.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "trunk",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/ProgramData/chocolatey/lib/gradle/tools",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build java-leetcode-training.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.amazon-spring-2023.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.interview top 150 tests.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;trunk&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/ProgramData/chocolatey/lib/gradle/tools&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.interview top 150 tests">
     <configuration name="Aamazon Spring 2023 tests" type="JUnit" factoryName="JUnit">
       <module name="algo-commons.test" />
@@ -181,7 +179,8 @@
     <MESSAGE value="solution passed using PriorityQueue" />
     <MESSAGE value="Update algo tests add JumpGame2.java" />
     <MESSAGE value="add workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="add workspace.xml" />
+    <MESSAGE value="Add BFS LevelOrder.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add BFS LevelOrder.java" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
