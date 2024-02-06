@@ -2,51 +2,20 @@ package coffee.lkh.algorithm.tests;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
 import coffee.lkh.algorithm.impl.companies.Candy;
-import coffee.lkh.algorithm.impl.companies.CombinaisonGenerator;
+import coffee.lkh.algorithm.impl.companies.JumpGame2;
 import coffee.lkh.algorithm.impl.companies.MergeKSortedList;
-import coffee.lkh.algorithm.impl.companies.amazon.KFactorsOfN;
-import coffee.lkh.algorithm.impl.companies.amazon.OptimalPartitionString;
 import org.greenrobot.eventbus.EventBus;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicIntegerArray;
-import java.util.concurrent.atomic.AtomicReference;
 
 import static coffee.lkh.algorithm.impl.companies.MergeKSortedList.*;
 
-public class AmazonSpring2023Tests {
-    @Test
-    public void testKthFactor() {
-        final Map<String, Object> parameters = new HashMap<>();
-        final AtomicInteger k = new AtomicInteger(0);
-        final AtomicInteger n = new AtomicInteger(0);
+public class TopInterview150Test {
 
-        parameters.put("k",k);
-        parameters.put("n", n);
-
-        final EventBus bus = new EventBus();
-        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new CombinaisonGenerator());
-        delegate.process(parameters);
-    }
-
-    @Test
-    public void testPartitionString(){
-        final Map<String, Object> parameters = new HashMap<>();
-        final AtomicReference<String> s = new AtomicReference<>("gizfdfri");
-
-        parameters.put("s",s);
-
-        final EventBus bus = new EventBus();
-        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new OptimalPartitionString());
-        delegate.process(parameters);
-        int result = (Integer) parameters.get("result");
-
-        System.out.printf("The result of partition string is %d%n", result);
-    }
 
     @Test
     public void testCandy(){
@@ -54,12 +23,24 @@ public class AmazonSpring2023Tests {
 
         parameters.put("ratings",new int[]{1,3,2,2,1});
 
-        final EventBus bus = new EventBus();
-        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new Candy());
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(new Candy());
         delegate.process(parameters);
         int result = (Integer) parameters.get("result");
 
         System.out.printf("The result of candy is %d%n", result);
+    }
+
+    @Test
+    public void testJumpGame2(){
+        final Map<String, Object> parameters = new HashMap<>();
+
+        parameters.put("nums",new AtomicIntegerArray(new int[]{2,3,1,1,4}));
+
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(new JumpGame2());
+        delegate.process(parameters);
+        int result = (Integer) parameters.get("result");
+
+        System.out.printf("The result of jump game 2 is %d%n", result);
     }
 
     @Test
@@ -73,8 +54,7 @@ public class AmazonSpring2023Tests {
         ListNode[] nodes = {nodeA1, nodeB1, nodeC1};
         parameters.put("lists",nodes);
 
-        final EventBus bus = new EventBus();
-        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(bus, new MergeKSortedList());
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(new MergeKSortedList());
         delegate.process(parameters);
         ListNode result = (ListNode) parameters.get("result");
         System.out.println("The result of k merged sorted list is :");

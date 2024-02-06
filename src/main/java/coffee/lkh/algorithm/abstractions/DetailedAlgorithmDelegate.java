@@ -1,7 +1,9 @@
 package coffee.lkh.algorithm.abstractions;
 
 import coffee.lkh.algorithm.events.AlgorithmProcessCompletedEvent;
+import coffee.lkh.algorithm.events.AlgorithmProcessCompletedEventSubscriber;
 import coffee.lkh.algorithm.events.AlgorithmProcessInitiatedEvent;
+import coffee.lkh.algorithm.events.AlgorithmProcessInitiatedEventSubscriber;
 import org.greenrobot.eventbus.EventBus;
 
 import java.util.Map;
@@ -12,6 +14,21 @@ public class DetailedAlgorithmDelegate implements DetailedAlgorithm {
 
     public DetailedAlgorithmDelegate(EventBus eventBus, DetailedAlgorithm detailedAlgorithm) {
         this.eventBus = eventBus;
+        final AlgorithmProcessInitiatedEventSubscriber initiatedSubscriber = new AlgorithmProcessInitiatedEventSubscriber();
+        final AlgorithmProcessCompletedEventSubscriber completedSubscriber = new AlgorithmProcessCompletedEventSubscriber();
+        this.eventBus.register(initiatedSubscriber);
+        this.eventBus.register(completedSubscriber);
+
+        this.detailedAlgorithm = detailedAlgorithm;
+    }
+
+    public DetailedAlgorithmDelegate(DetailedAlgorithm detailedAlgorithm) {
+        this.eventBus = new EventBus();
+        final AlgorithmProcessInitiatedEventSubscriber initiatedSubscriber = new AlgorithmProcessInitiatedEventSubscriber();
+        final AlgorithmProcessCompletedEventSubscriber completedSubscriber = new AlgorithmProcessCompletedEventSubscriber();
+        this.eventBus.register(initiatedSubscriber);
+        this.eventBus.register(completedSubscriber);
+
         this.detailedAlgorithm = detailedAlgorithm;
     }
 

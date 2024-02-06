@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="add workspace.xml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/events/AlgorithmProcessCompletedEventSubscriber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/events/AlgorithmProcessInitiatedEventSubscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/abstractions/DetailedAlgorithmDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/abstractions/DetailedAlgorithmDelegate.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2bqIzUYZ6cnsSklN0OfdgLrN2pt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build java-leetcode-training.executor": "Run",
+    "JUnit.amazon-spring-2023.executor": "Run",
+    "JUnit.interview top 150 tests.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "trunk",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/ProgramData/chocolatey/lib/gradle/tools",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.interview top 150 tests">
+    <configuration name="Aamazon Spring 2023 tests" type="JUnit" factoryName="JUnit">
+      <module name="algo-commons.test" />
+      <option name="PACKAGE_NAME" value="coffee.lkh.algorithm.tests" />
+      <option name="MAIN_CLASS_NAME" value="coffee.lkh.algorithm.tests.AmazonSpring2023Test" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="interview top 150 tests" type="JUnit" factoryName="JUnit">
+      <module name="algo-commons.test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="PACKAGE_NAME" value="coffee.lkh.algorithm.tests" />
+      <option name="MAIN_CLASS_NAME" value="coffee.lkh.algorithm.tests.TopInterview150Test" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.interview top 150 tests" />
+      <item itemvalue="JUnit.Aamazon Spring 2023 tests" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="" />
+      <created>1706936445360</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706936445360</updated>
+      <workItem from="1706936446402" duration="25981000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add Candy">
+      <option name="closed" value="true" />
+      <created>1706996506902</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706996506902</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update MergeKSortedList.java">
+      <option name="closed" value="true" />
+      <created>1706999410783</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706999410783</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add output for testMergeKSortedList">
+      <option name="closed" value="true" />
+      <created>1707000705643</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707000705644</updated>
+    </task>
+    <task id="LOCAL-00004" summary="solution passed using PriorityQueue">
+      <option name="closed" value="true" />
+      <created>1707001343200</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707001343200</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update algo tests add JumpGame2.java">
+      <option name="closed" value="true" />
+      <created>1707128765886</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707128765886</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add workspace.xml">
+      <option name="closed" value="true" />
+      <created>1707129022870</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707129022870</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Candy" />
+    <MESSAGE value="Update MergeKSortedList.java" />
+    <MESSAGE value="add output for testMergeKSortedList" />
+    <MESSAGE value="solution passed using PriorityQueue" />
+    <MESSAGE value="Update algo tests add JumpGame2.java" />
+    <MESSAGE value="add workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="add workspace.xml" />
+  </component>
+  <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
+    <option name="sizePresets">
+      <list>
+        <SizePreset>
+          <option name="caption" value="Phone" />
+          <option name="height" value="568" />
+          <option name="width" value="320" />
+        </SizePreset>
+        <SizePreset>
+          <option name="caption" value="Tablet" />
+          <option name="height" value="1024" />
+          <option name="width" value="768" />
+        </SizePreset>
+        <SizePreset>
+          <option name="caption" value="Desktop" />
+          <option name="height" value="900" />
+          <option name="width" value="1440" />
+        </SizePreset>
+      </list>
+    </option>
+  </component>
+</project>
