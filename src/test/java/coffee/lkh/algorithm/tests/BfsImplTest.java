@@ -1,12 +1,15 @@
 package coffee.lkh.algorithm.tests;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
+import coffee.lkh.algorithm.impl.companies.arrays.CombinaisonGenerator;
 import coffee.lkh.algorithm.impl.companies.bfs.LevelOrder;
+import coffee.lkh.algorithm.impl.companies.bfs.NumSquares;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class BfsImplTest {
 
@@ -27,5 +30,20 @@ public class BfsImplTest {
             }
             System.out.println();
         }
+    }
+
+    @Test
+    public void testNumSquares() {
+        final Map<String, Object> parameters = new HashMap<>();
+        final AtomicInteger n = new AtomicInteger(12);
+
+        parameters.put("n", n);
+
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(new NumSquares());
+        delegate.process(parameters);
+
+        int result = (Integer) parameters.get("result");
+
+        System.out.printf("The result of BFS numSquares string is %d%n", result);
     }
 }
