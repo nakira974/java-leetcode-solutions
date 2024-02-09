@@ -15,7 +15,7 @@ public class ValidSudoku extends DetailedAlgorithmBase {
     @Override
     public Map<String, Object> process(Map<String, Object> params) {
         if (!isParametersValid(params)) {
-            throw new RuntimeException("Invalid validSudoku parameter N !");
+            throw new RuntimeException("Invalid validSudoku parameter board !");
         }
         char[][] board = ((char[][]) params.get(BOARD));
         params.put("result", isValidSudoku(board));
