@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="update namespaces">
-      <change afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/bfs/NumSquares.java" afterDir="false" />
+    <list default="true" id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="Add NumSquares.java and related test in BfsImplTest.java">
+      <change afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/matrix/ValidSudoku.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/MatrixImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/BfsImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/BfsImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/bfs/NumSquares.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/bfs/NumSquares.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +52,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.BfsImplTest.testNumSquares.executor": "Run",
+    "Gradle.Build algo-commons.executor": "Run",
     "Gradle.Build java-leetcode-training.executor": "Run",
     "JUnit.amazon-spring-2023.executor": "Run",
     "JUnit.interview top 150 tests.executor": "Debug",
+    "JUnit.top interview 150 tests.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -75,7 +78,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.BfsImplTest.testNumSquares">
+  <component name="RunManager" selected="JUnit.matrix tests">
     <configuration name="BfsImplTest.testNumSquares" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -122,6 +125,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="matrix tests" type="JUnit" factoryName="JUnit">
+      <module name="algo-commons.test" />
+      <option name="PACKAGE_NAME" value="coffee.lkh.algorithm.tests" />
+      <option name="MAIN_CLASS_NAME" value="coffee.lkh.algorithm.tests.MatrixImplTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="top interview 150 tests" type="JUnit" factoryName="JUnit">
       <module name="algo-commons.test" />
       <option name="PACKAGE_NAME" value="coffee.lkh.algorithm.tests" />
@@ -136,6 +149,7 @@
       <item itemvalue="Gradle.BfsImplTest.testNumSquares" />
       <item itemvalue="JUnit.bfs tests" />
       <item itemvalue="JUnit.top interview 150 tests" />
+      <item itemvalue="JUnit.matrix tests" />
       <item itemvalue="JUnit.Aamazon Spring 2023 tests" />
     </list>
     <recent_temporary>
@@ -161,7 +175,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706936445360</updated>
       <workItem from="1706936446402" duration="25981000" />
-      <workItem from="1707437070019" duration="393000" />
+      <workItem from="1707437070019" duration="8436000" />
     </task>
     <task id="LOCAL-00001" summary="Add Candy">
       <option name="closed" value="true" />
@@ -243,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707251421908</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add NumSquares.java and related test in BfsImplTest.java">
+      <option name="closed" value="true" />
+      <created>1707437487858</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1707437487858</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +283,8 @@
     <MESSAGE value="update workspace.xml, add bfs tests config" />
     <MESSAGE value="reformat code" />
     <MESSAGE value="update namespaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="update namespaces" />
+    <MESSAGE value="Add NumSquares.java and related test in BfsImplTest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add NumSquares.java and related test in BfsImplTest.java" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
