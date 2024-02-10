@@ -28,41 +28,33 @@ public class TrapRainWater extends DetailedAlgorithmBase {
     protected boolean isParametersValid(Map<String, Object> params) {
         return params.containsKey(HEIGHT) & params.get(HEIGHT) instanceof AtomicIntegerArray;
     }
-    public int trap(int[] heights) {
-        int n = heights.length;
-        int waterTrapped = 0;
+    public int trap(int[] height) {
+        int n = height.length;
+        int result = 0;
         int left = 0;
         int right = n - 1;
-        int leftMaxHeight = 0;
-        int rightMaxHeight = 0;
+        int leftMax = 0; // Keeps track of the maximum height on the left side
+        int rightMax = 0; // Keeps track of the maximum height on the right side
 
-        // Traverse the heights array from both ends until the pointers meet
         while (left < right) {
-            // Check if the height at the left pointer is smaller or equal to the height at the right pointer
-            if (heights[left] <= heights[right]) {
-                // If the current height is greater than or equal to the left maximum height, update it
-                if (heights[left] >= leftMaxHeight) {
-                    leftMaxHeight = heights[left];
+            if (height[left] <= height[right]) { // If the height at the left pointer is smaller or equal
+                if (height[left] >= leftMax) { // Check if it is the new maximum height on the left side
+                    leftMax = height[left]; // Update the left maximum
                 } else {
-                    // Calculate the amount of water trapped at the current position based on the left maximum height
-                    waterTrapped += leftMaxHeight - heights[left];
+                    result += leftMax - height[left]; // Add the trapped water between the left maximum and current height
                 }
-                // Move the left pointer to the right
-                left++;
-            } else {
-                // If the height at the right pointer is greater than or equal to the right maximum height, update it
-                if (heights[right] >= rightMaxHeight) {
-                    rightMaxHeight = heights[right];
+                left++; // Move the left pointer to the right
+            } else { // If the height at the right pointer is smaller
+                if (height[right] >= rightMax) { // Check if it is the new maximum height on the right side
+                    rightMax = height[right]; // Update the right maximum
                 } else {
-                    // Calculate the amount of water trapped at the current position based on the right maximum height
-                    waterTrapped += rightMaxHeight - heights[right];
+                    result += rightMax - height[right]; // Add the trapped water between the right maximum and current height
                 }
-                // Move the right pointer to the left
-                right--;
+                right--; // Move the right pointer to the left
             }
         }
 
-        return waterTrapped;
+        return result; // Return the total amount of water trapped
     }
 
 }
