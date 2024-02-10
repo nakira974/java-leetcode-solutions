@@ -28,28 +28,30 @@ public class ValidSudoku extends DetailedAlgorithmBase {
     }
     public boolean isValidSudoku(char[][] board) {
         int n = board.length;
-        final Set<Character>[] rows = new HashSet[n];
-        final Set<Character>[] columns = new HashSet[n];
-        final Set<Character>[] subgrids = new HashSet[n];
+        final Set<Character>[] rows = new HashSet[n]; // Array of sets to store unique digits for each row
+        final Set<Character>[] columns = new HashSet[n]; // Array of sets to store unique digits for each column
+        final Set<Character>[] subgrids = new HashSet[n]; // Array of sets to store unique digits for each 3x3 subgrid
 
         for (int i = 0; i < n; i++) {
-            rows[i] = new HashSet<>();
-            columns[i] = new HashSet<>();
-            subgrids[i] = new HashSet<>();
+            rows[i] = new HashSet<>(); // Initialize set for each row
+            columns[i] = new HashSet<>(); // Initialize set for each column
+            subgrids[i] = new HashSet<>(); // Initialize set for each subgrid
         }
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 char digit = board[i][j];
-                if (digit != '.') {
+                if (digit != '.') { // Skip empty cells
+                    // Check if the digit is already present in the corresponding row, column, or subgrid
+                    // If so, it means there is a duplicate and the Sudoku board is invalid
                     if (!rows[i].add(digit) || !columns[j].add(digit) || !subgrids[i/3 * 3 + j/3].add(digit)) {
-                        return false; // Duplicate found
+                        return false; // Duplicate found, return false
                     }
                 }
             }
         }
 
-        return true; // No duplicates found
+        return true; // No duplicates found, Sudoku board is valid
     }
 
 }
