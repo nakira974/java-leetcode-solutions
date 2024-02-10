@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="fixed parameters of ValidSudoku.java">
+    <list default="true" id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="update comments">
+      <change afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/arrays/TrapRainWater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/matrix/ValidSudoku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/matrix/ValidSudoku.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/MatrixImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/MatrixImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/TopInterview150Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/ArrayTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +54,7 @@
     "Gradle.Build algo-commons.executor": "Run",
     "Gradle.Build java-leetcode-training.executor": "Run",
     "JUnit.amazon-spring-2023.executor": "Run",
+    "JUnit.array tests.executor": "Run",
     "JUnit.interview top 150 tests.executor": "Debug",
     "JUnit.matrix tests.executor": "Debug",
     "JUnit.top interview 150 tests.executor": "Debug",
@@ -78,7 +79,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.matrix tests">
+  <component name="RunManager" selected="JUnit.array tests">
     <configuration name="BfsImplTest.testNumSquares" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -113,6 +114,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="array tests" type="JUnit" factoryName="JUnit">
+      <module name="algo-commons.test" />
+      <option name="PACKAGE_NAME" value="coffee.lkh.algorithm.tests" />
+      <option name="MAIN_CLASS_NAME" value="coffee.lkh.algorithm.tests.ArrayTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="bfs tests" type="JUnit" factoryName="JUnit">
       <module name="algo-commons.test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -135,20 +146,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="top interview 150 tests" type="JUnit" factoryName="JUnit">
-      <module name="algo-commons.test" />
-      <option name="PACKAGE_NAME" value="coffee.lkh.algorithm.tests" />
-      <option name="MAIN_CLASS_NAME" value="coffee.lkh.algorithm.tests.TopInterview150Test" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Gradle.BfsImplTest.testNumSquares" />
       <item itemvalue="JUnit.bfs tests" />
-      <item itemvalue="JUnit.top interview 150 tests" />
+      <item itemvalue="JUnit.array tests" />
       <item itemvalue="JUnit.matrix tests" />
       <item itemvalue="JUnit.Aamazon Spring 2023 tests" />
     </list>
@@ -175,7 +176,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706936445360</updated>
       <workItem from="1706936446402" duration="25981000" />
-      <workItem from="1707437070019" duration="9389000" />
+      <workItem from="1707437070019" duration="16505000" />
     </task>
     <task id="LOCAL-00001" summary="Add Candy">
       <option name="closed" value="true" />
@@ -281,7 +282,31 @@
       <option name="project" value="LOCAL" />
       <updated>1707522742055</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fixed ValidSudoku.java">
+      <option name="closed" value="true" />
+      <created>1707523553695</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707523553695</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add comments">
+      <option name="closed" value="true" />
+      <created>1707523617022</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1707523617022</updated>
+    </task>
+    <task id="LOCAL-00016" summary="update comments">
+      <option name="closed" value="true" />
+      <created>1707523690736</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1707523690736</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +327,10 @@
     <MESSAGE value="Add NumSquares.java and related test in BfsImplTest.java" />
     <MESSAGE value="add ValidSudoku.java and MatrixImplTest.java and update workspace.xml created &quot;matrix tests&quot;" />
     <MESSAGE value="fixed parameters of ValidSudoku.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed parameters of ValidSudoku.java" />
+    <MESSAGE value="fixed ValidSudoku.java" />
+    <MESSAGE value="Add comments" />
+    <MESSAGE value="update comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="update comments" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">

@@ -4,6 +4,8 @@ import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
 import coffee.lkh.algorithm.impl.companies.arrays.Candy;
 import coffee.lkh.algorithm.impl.companies.arrays.JumpGame2;
 import coffee.lkh.algorithm.impl.companies.arrays.MergeKSortedList;
+import coffee.lkh.algorithm.impl.companies.arrays.TrapRainWater;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -12,7 +14,7 @@ import java.util.concurrent.atomic.AtomicIntegerArray;
 
 import static coffee.lkh.algorithm.impl.companies.arrays.MergeKSortedList.ListNode;
 
-public class TopInterview150Test {
+public class ArrayTest {
 
 
     @Test
@@ -39,6 +41,23 @@ public class TopInterview150Test {
         int result = (Integer) parameters.get("result");
 
         System.out.printf("The result of jump game 2 is %d%n", result);
+    }
+
+    @Test
+    public void testTrapRainWater() {
+        final Map<String, Object> parameters = new HashMap<>();
+
+        parameters.put("height", new AtomicIntegerArray(new int[]{0,1,0,2,1,0,1,3,2,1,2,1}));
+
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(new TrapRainWater());
+        delegate.process(parameters);
+        int result = (Integer) parameters.get("result");
+        Assertions.assertEquals(6, result);
+        parameters.put("height", new AtomicIntegerArray(new int[]{4,2,0,3,2,5}));
+        delegate.process(parameters);
+        result = (Integer) parameters.get("result");
+        Assertions.assertEquals(9, result);
+        System.out.printf("The result of trap rain water is %d%n", result);
     }
 
     @Test
