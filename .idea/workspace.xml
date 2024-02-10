@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="Add NumSquares.java and related test in BfsImplTest.java">
-      <change afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/matrix/ValidSudoku.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/MatrixImplTest.java" afterDir="false" />
+    <list default="true" id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="fixed parameters of ValidSudoku.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/bfs/NumSquares.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/bfs/NumSquares.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/matrix/ValidSudoku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/matrix/ValidSudoku.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/MatrixImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/MatrixImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +55,7 @@
     "Gradle.Build java-leetcode-training.executor": "Run",
     "JUnit.amazon-spring-2023.executor": "Run",
     "JUnit.interview top 150 tests.executor": "Debug",
+    "JUnit.matrix tests.executor": "Debug",
     "JUnit.top interview 150 tests.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -175,7 +175,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706936445360</updated>
       <workItem from="1706936446402" duration="25981000" />
-      <workItem from="1707437070019" duration="8436000" />
+      <workItem from="1707437070019" duration="9389000" />
     </task>
     <task id="LOCAL-00001" summary="Add Candy">
       <option name="closed" value="true" />
@@ -265,7 +265,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707437487858</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add ValidSudoku.java and MatrixImplTest.java and update workspace.xml created &quot;matrix tests&quot;">
+      <option name="closed" value="true" />
+      <created>1707522579758</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1707522579758</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fixed parameters of ValidSudoku.java">
+      <option name="closed" value="true" />
+      <created>1707522742055</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1707522742055</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +300,9 @@
     <MESSAGE value="reformat code" />
     <MESSAGE value="update namespaces" />
     <MESSAGE value="Add NumSquares.java and related test in BfsImplTest.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add NumSquares.java and related test in BfsImplTest.java" />
+    <MESSAGE value="add ValidSudoku.java and MatrixImplTest.java and update workspace.xml created &quot;matrix tests&quot;" />
+    <MESSAGE value="fixed parameters of ValidSudoku.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed parameters of ValidSudoku.java" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">

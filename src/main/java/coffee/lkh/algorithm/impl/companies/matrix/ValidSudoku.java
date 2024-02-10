@@ -27,41 +27,29 @@ public class ValidSudoku extends DetailedAlgorithmBase {
         return params.containsKey(BOARD) && params.get(BOARD) instanceof char[][];
     }
     public boolean isValidSudoku(char[][] board) {
+        int n = board.length;
+        final Set<Character>[] rows = new HashSet[n];
+        final Set<Character>[] columns = new HashSet[n];
+        final Set<Character>[] subgrids = new HashSet[n];
 
-        int rowsCount = board.length;
-        int columnsCount = board[0].length;
-        if (rowsCount != 9 || columnsCount != 9) {
-            return false;
+        for (int i = 0; i < n; i++) {
+            rows[i] = new HashSet<>();
+            columns[i] = new HashSet<>();
+            subgrids[i] = new HashSet<>();
         }
-        return checkDuplicates(board);
-    }
 
-    public boolean checkDuplicates(char[][] board) {
-        for (int i = 0; i < 9; i += 3) {
-            for (int j = 0; j < 9; j += 3) {
-                if (hasDuplicate(board, i, j)) {
-                    return true; // Duplicate found within the 3x3 subgrid
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                char digit = board[i][j];
+                if (digit != '.') {
+                    if (!rows[i].add(digit) || !columns[j].add(digit) || !subgrids[i/3 * 3 + j/3].add(digit)) {
+                        return false; // Duplicate found
+                    }
                 }
             }
         }
-        return false; // No duplicates found in any of the 3x3 subgrids
-    }
 
-    private boolean hasDuplicate(char[][] board, int rowStart, int colStart) {
-        Set<Character> uniqueChars = new HashSet<>();
-        for (int i = rowStart; i < rowStart + 3; i++) {
-            for (int j = colStart; j < colStart + 3; j++) {
-                char currentChar = board[i][j];
-                if (String.valueOf(currentChar).equals("."))
-                    continue;
-                if (uniqueChars.contains(currentChar) || Integer.parseInt(String.valueOf(currentChar)) > 9) {
-                    return false;
-                } else {
-                    uniqueChars.add(currentChar);
-                }
-            }
-        }
-        return true; // No duplicates found within the subgrid
+        return true; // No duplicates found
     }
 
 }
