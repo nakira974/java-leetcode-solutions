@@ -2,7 +2,11 @@ package coffee.lkh.algorithm.impl.companies.arrays;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmBase;
 
+import javax.xml.stream.events.Characters;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicIntegerArray;
 
 public class TrapRainWater extends DetailedAlgorithmBase {
@@ -13,6 +17,7 @@ public class TrapRainWater extends DetailedAlgorithmBase {
         if (!isParametersValid(params)) {
             throw new RuntimeException("Params of TrapRainWater are incorrect!");
         }
+
         final AtomicIntegerArray heightParam = (AtomicIntegerArray) params.get(HEIGHT);
         int[] height = new int[heightParam.length()];
         for (int i = 0; i < heightParam.length(); i++) {
@@ -57,4 +62,17 @@ public class TrapRainWater extends DetailedAlgorithmBase {
         return result; // Return the total amount of water trapped
     }
 
+    public boolean isSubsequence(String s, String t) {
+        Deque<Integer> sChars = new LinkedList<>();
+        Deque<Integer> tChars = new LinkedList<>();
+        s.chars().forEach(sChars::offer);
+        t.chars().forEach(tChars::offer);
+        int count =0;
+        while(!sChars.isEmpty()){
+            if(Objects.equals(tChars.poll(), tChars.poll())){
+                count++;
+            }
+        }
+        return count == t.length();
+    }
 }
