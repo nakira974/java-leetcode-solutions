@@ -9,6 +9,7 @@ public class RotateImage extends DetailedAlgorithmBase {
     private final static String MATRIX = "matrix";
     @Override
     public Map<String, Object> process(Map<String, Object> params) {
+
         if (!isParametersValid(params)) {
             throw new RuntimeException("Params of RotateImage are incorrect!");
         }
@@ -16,7 +17,6 @@ public class RotateImage extends DetailedAlgorithmBase {
         final int[][] matrix = (int[][]) params.get(MATRIX);
         rotate(matrix);
         params.put("result", new Void[]{});
-
         return params;
     }
 

@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="Update TrapRainWater.java">
+    <list default="true" id="d5f0dedb-0e64-4223-8732-fae519171f0b" name="Changes" comment="Add RotateImage.java">
+      <change afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/arrays/FullTextJustification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/arrays/TrapRainWater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/arrays/TrapRainWater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/matrix/RotateImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coffee/lkh/algorithm/impl/companies/matrix/RotateImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/ArrayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coffee/lkh/algorithm/tests/ArrayTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +55,7 @@
     "Gradle.Build algo-commons.executor": "Run",
     "Gradle.Build java-leetcode-training.executor": "Run",
     "JUnit.amazon-spring-2023.executor": "Run",
-    "JUnit.array tests.executor": "Run",
+    "JUnit.array tests.executor": "Debug",
     "JUnit.interview top 150 tests.executor": "Debug",
     "JUnit.matrix tests.executor": "Debug",
     "JUnit.top interview 150 tests.executor": "Debug",
@@ -175,7 +177,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706936445360</updated>
       <workItem from="1706936446402" duration="25981000" />
-      <workItem from="1707437070019" duration="21097000" />
+      <workItem from="1707437070019" duration="24140000" />
     </task>
     <task id="LOCAL-00001" summary="Add Candy">
       <option name="closed" value="true" />
@@ -321,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707588479142</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Add RotateImage.java">
+      <option name="closed" value="true" />
+      <created>1707685229247</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1707685229247</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +357,8 @@
     <MESSAGE value="update comments" />
     <MESSAGE value="Add TrapRainWater.java" />
     <MESSAGE value="Update TrapRainWater.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update TrapRainWater.java" />
+    <MESSAGE value="Add RotateImage.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add RotateImage.java" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">

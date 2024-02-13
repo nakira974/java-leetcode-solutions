@@ -1,15 +1,14 @@
 package coffee.lkh.algorithm.tests;
 
 import coffee.lkh.algorithm.abstractions.DetailedAlgorithmDelegate;
-import coffee.lkh.algorithm.impl.companies.arrays.Candy;
-import coffee.lkh.algorithm.impl.companies.arrays.JumpGame2;
-import coffee.lkh.algorithm.impl.companies.arrays.MergeKSortedList;
-import coffee.lkh.algorithm.impl.companies.arrays.TrapRainWater;
+import coffee.lkh.algorithm.impl.companies.arrays.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicIntegerArray;
 
 import static coffee.lkh.algorithm.impl.companies.arrays.MergeKSortedList.ListNode;
@@ -59,6 +58,24 @@ public class ArrayTest {
         Assertions.assertEquals(9, result);
         System.out.printf("The result of trap rain water is %d%n", result);
     }
+
+    @Test
+    public void testFullTextJustification() {
+        final Map<String, Object> parameters = new HashMap<>();
+
+        parameters.put("words", new String[] {"Hello", "I", "Love", "Ice-Cream", "with", "StrawBerry"});
+        parameters.put("maxWidth", new AtomicInteger(12));
+
+        final DetailedAlgorithmDelegate delegate = new DetailedAlgorithmDelegate(new FullTextJustification());
+        delegate.process(parameters);
+        List<String> result = (List<String>) parameters.get("result");
+        Assertions.assertFalse(result.isEmpty());
+        int count = 0;
+        for(String sentences : result){
+            System.out.printf("The result n°%d of fullTextJustify is %s%n", count, sentences);
+        }
+    }
+
 
     @Test
     public void testMergeKSortedList() {
